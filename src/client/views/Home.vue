@@ -1,7 +1,7 @@
 <template>
     <main style="margin-top:50px;">
         <el-row>
-            <div class="demo text-center">Product Form</div>
+            <div class="demo text-center">Add Inventory</div>
         </el-row>
         <br>
         <br>
@@ -48,7 +48,7 @@
                 <el-button type="primary" size="large" @click="resetForm">Reset</el-button>
                 <router-link :to="{name: 'report'}" style="text-decoration:none;color: white;float:right;">
                     <el-button type="primary" size="large">
-                        View Saved Products
+                        View Inventory
                     </el-button>
                 </router-link>
             </el-col>
@@ -86,9 +86,17 @@ export default {
             }
             callback();
         };
-        const validUrl = (rule, value, callback) => {
+        const validImageString = (rule, value, callback) => {
             if(!value.match(/\.(jpeg|jpg|gif|png)$/)){
                 return callback('Please enter a valid image url');
+            }
+            callback();
+        };
+        const validType = (rule, value, callback) => {
+            if(isNaN(value)){
+                return callback('Please select a valid option');
+            } else if(!(value in ['1', '2', '3', '4'])) {
+                return callback('Please select a valid option');
             }
             callback();
         };
@@ -101,6 +109,7 @@ export default {
                 image_url: '',
                 quantity: ''
             },
+            // When more product types added get all types from DB on creation of page
             productTypes: [
                 {
                     id: '1',
@@ -130,6 +139,9 @@ export default {
                 product_type_id: [
                     {
                         required: true, message: 'Product Type is required', trigger: 'blur'
+                    },
+                    {
+                        validator: validType, trigger: 'blur'
                     }
                 ],
                 product_name: [
@@ -150,7 +162,7 @@ export default {
                         required: true, message: 'Image url is required', trigger: 'blur'
                     },
                     {
-                        validator: validUrl, trigger: 'change, blur'
+                        validator: validImageString, trigger: 'blur'
                     }
                 ],
                 quantity: [

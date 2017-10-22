@@ -2,7 +2,7 @@
     <main style="margin-top:50px">
         <el-row>
             <el-col :span="24">
-                <div class="demo">Product Listing</div>
+                <div class="demo">Product Inventory</div>
             </el-col>
         </el-row>
         <br/>
@@ -28,7 +28,7 @@
             <span>No products found</span>
         </el-row>
         <el-row>
-            <router-link :to="{name: 'home'}" style="text-decoration:none;color:white;">
+            <router-link :to="{name: 'home'}" style="text-decoration:none;color:white;float:right;">
                 <el-button type="primary">
                     Add More Products
                 </el-button>

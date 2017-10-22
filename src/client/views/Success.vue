@@ -4,7 +4,7 @@
             <div style="margin-top: 100px;font-size: 30px;color: green">{{message}} for product with id: {{productId}}</div>
             <router-link :to="{name: 'report'}" style="text-decoration:none;color: white;">
                 <el-button type="primary" size="large" style="margin-top: 30px">
-                    Product List
+                    Inventory
                 </el-button>
             </router-link>
         </div>
