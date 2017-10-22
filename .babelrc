@@ -1,0 +1,24 @@
+{
+    "presets": [
+        [
+            "es2015",
+            {
+                "modules": false
+            }
+        ],
+        "stage-1"
+    ],
+    "plugins": [
+        "lodash",
+        "syntax-dynamic-import",
+        [ "component", [
+                {
+                    "libraryName": "element-ui",
+                    "styleLibraryName": "theme-default"
+                }
+            ]
+        ],
+        "transform-runtime"
+    ],
+    "comments": false
+}

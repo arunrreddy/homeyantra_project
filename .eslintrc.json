@@ -1,0 +1,475 @@
+{
+    "env": {
+        "es6": true,
+        "node": true,
+        "builtin": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2017,
+        "sourceType": "script",
+        "ecmaFeatures": {
+            "arrowFunctions": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "root": true,
+    "globals": {
+        "appRoot": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:lodash/recommended"
+    ],
+    "plugins": [
+        "html",
+        "promise",
+        "lodash"
+    ],
+    "settings": {
+        "lodash": {
+            "pragma": "_",
+            "version": 4
+        }
+    },
+    "rules": {
+        // Possible Errors
+        "no-empty": [
+            "error",
+            {
+                "allowEmptyCatch": true
+            }
+        ],
+        "no-extra-parens": [
+            "warn",
+            "all",
+            {
+                "nestedBinaryExpressions": false
+            }
+        ],
+        "no-irregular-whitespace": [
+            "error",
+            {
+                "skipComments": true,
+                "skipRegExps": true,
+                "skipTemplates": true
+            }
+        ],
+        "no-unsafe-finally": "error",
+        "valid-jsdoc": [
+            "warn",
+            {
+                "requireReturn": false,
+                "requireReturnType": false,
+                "requireParamDescription": false,
+                "requireReturnDescription": false
+            }
+        ],
+        "no-console": "off",
+        // Best Practices
+        "array-callback-return": "error",
+        "block-scoped-var": "error",
+        "curly": "error",
+        "dot-notation": [
+            "error",
+            {
+                "allowKeywords": true
+            }
+        ],
+        "eqeqeq": [
+            "warn",
+            "allow-null"
+        ],
+        "guard-for-in": "error",
+        "no-else-return": "error",
+        "no-empty-function": "error",
+        "no-eval": "error",
+        "no-extend-native": "warn",
+        "no-floating-decimal": "error",
+        "no-implicit-coercion": [
+            "error",
+            {
+                "string": false
+            }
+        ],
+        "no-loop-func": "error",
+        "no-multi-str": "error",
+        "no-proto": "error",
+        "no-sequences": "error",
+        "no-with": "error",
+        "wrap-iife": [
+            "error",
+            "any"
+        ],
+        "default-case": [
+            "warn",
+            {
+                "commentPattern": "^skip\\sdefault"
+            }
+        ],
+        "dot-location": [
+            "error",
+            "property"
+        ],
+        "no-alert": "error",
+        "no-caller": "error",
+        "no-extra-bind": "error",
+        "no-implied-eval": "error",
+        "no-invalid-this": "warn",
+        "no-iterator": "error",
+        "no-labels": "error",
+        "no-new-func": "error",
+        "no-new-wrappers": "error",
+        "no-param-reassign": "error",
+        "no-return-assign": "error",
+        "no-script-url": "error",
+        "no-self-compare": "error",
+        "no-throw-literal": "error",
+        "no-unmodified-loop-condition": "error",
+        "no-unused-expressions": "error",
+        "no-useless-call": "error",
+        "no-useless-concat": "error",
+        "no-useless-escape": "error",
+        "no-void": "error",
+        "radix": "error",
+        "yoda": "error",
+        // Strict Mode
+        "strict": [
+            "error",
+            "global"
+        ],
+        // Variables
+        "no-shadow": [
+            "error",
+            {
+                "builtinGlobals": true
+            }
+        ],
+        "no-unused-vars": [
+            "error",
+            {
+                "varsIgnorePattern": "[iI]gnore",
+                "caughtErrors": "all",
+                "caughtErrorsIgnorePattern": "^ignore",
+                "argsIgnorePattern": "next"
+            }
+        ],
+        "no-use-before-define": [
+            "error",
+            {
+                "functions": false,
+                "classes": true
+            }
+        ],
+        "no-delete-var": "error",
+        "no-shadow-restricted-names": "error",
+        "no-undef-init": "error",
+        "no-undefined": "error",
+        // Node.js and CommonJS
+        "no-path-concat": "error",
+        // Stylistic Issues
+        "block-spacing": "warn",
+        "camelcase": [
+            "warn",
+            {
+                "properties": "never"
+            }
+        ],
+        "comma-style": [
+            "warn",
+            "last"
+        ],
+        "eol-last": [
+            "error",
+            "unix"
+        ],
+        "indent": [
+            "warn",
+            4,
+            {
+                "VariableDeclarator": 1,
+                "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "max-len": [
+            "warn",
+            {
+                "code": 120,
+                "comments": 120,
+                "ignoreUrls": true
+            }
+        ],
+        "new-cap": [
+            "warn",
+            {
+                "capIsNew": true
+            }
+        ],
+        "no-bitwise": "error",
+        "no-lonely-if": "warn",
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 2,
+                "maxEOF": 1
+            }
+        ],
+        "no-new": "error",
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "require-jsdoc": [
+            "warn",
+            {
+                "require": {
+                    "FunctionDeclaration": true,
+                    "MethodDefinition": true,
+                    "ClassDeclaration": true
+                }
+            }
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "handle-callback-err": "error",
+        "no-mixed-requires": [
+            "error",
+            {
+                "grouping": true
+            }
+        ],
+        "no-new-require": "error",
+        "array-bracket-spacing": [
+            "error",
+            "never"
+        ],
+        "brace-style": "error",
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
+        "comma-spacing": "warn",
+        "computed-property-spacing": [
+            "error",
+            "never"
+        ],
+        "consistent-this": [
+            "error",
+            "self"
+        ],
+        "func-names": "error",
+        "func-style": [
+            "error",
+            "declaration",
+            {
+                "allowArrowFunctions": true
+            }
+        ],
+        "id-length": [
+            "warn",
+            {
+                "exceptions": [
+                    "_"
+                ]
+            }
+        ],
+        "max-depth": [
+            "error",
+            6
+        ],
+        "max-lines": [
+            "error",
+            {
+                "max": 300,
+                "skipBlankLines": true,
+                "skipComments": true
+            }
+        ],
+        "max-nested-callbacks": "error",
+        "max-params": [
+            "error",
+            6
+        ],
+        "max-statements-per-line": "error",
+        "new-parens": "error",
+        "newline-per-chained-call": [
+            "error",
+            {
+                "ignoreChainWithDepth": 3
+            }
+        ],
+        "no-array-constructor": "error",
+        "no-mixed-operators": [
+            "error",
+            {
+                "allowSamePrecedence": true
+            }
+        ],
+        "no-mixed-spaces-and-tabs": [
+            "error",
+            "smart-tabs"
+        ],
+        "no-new-object": "error",
+        "no-spaced-func": "error",
+        "no-trailing-spaces": [
+            "warn",
+            {
+                "skipBlankLines": true
+            }
+        ],
+        "no-unneeded-ternary": "error",
+        "no-whitespace-before-property": "error",
+        "operator-assignment": [
+            "error",
+            "always"
+        ],
+        "quote-props": [
+            "error",
+            "as-needed",
+            {
+                "keywords": true
+            }
+        ],
+        "space-unary-ops": "error",
+        "spaced-comment": [
+            "error",
+            "always",
+            {
+                "exceptions": [
+                    "-+",
+                    "-",
+                    "*",
+                    "-+"
+                ]
+            }
+        ],
+        "wrap-regex": "error",
+        // ECMAScript 6
+        "arrow-body-style": [
+            "error",
+            "as-needed"
+        ],
+        "arrow-parens": [
+            "error",
+            "as-needed"
+        ],
+        "arrow-spacing": [
+            "error",
+            {
+                "before": true,
+                "after": true
+            }
+        ],
+        "generator-star-spacing": [
+            "error",
+            "after"
+        ],
+        "no-confusing-arrow": "error",
+        "no-duplicate-imports": [
+            "error",
+            {
+                "includeExports": true
+            }
+        ],
+        "no-useless-computed-key": "error",
+        "no-useless-constructor": "error",
+        "no-useless-rename": "error",
+        "no-var": "warn",
+        "object-shorthand": [
+            "error",
+            "always"
+        ],
+        "prefer-arrow-callback": "error",
+        "prefer-const": "warn",
+        "prefer-reflect": "warn",
+        "prefer-rest-params": "warn",
+        "prefer-spread": "warn",
+        "prefer-template": "error",
+        "require-yield": "error",
+        // Plugin - Promise
+        "promise/param-names": 2,
+        "promise/always-return": "off",
+        "promise/catch-or-return": 2,
+        // Plugin - lodash - https://github.com/wix/eslint-plugin-lodash
+        // Possible errors
+        "lodash/callback-binding": "error",
+        "lodash/collection-method-value": "error",
+        "lodash/collection-return": "error",
+        "lodash/no-double-unwrap": "error",
+        "lodash/no-extra-args": "error",
+        "lodash/no-unbound-this": "error",
+        "lodash/unwrap": "error",
+        // Stylistic issues
+        "lodash/chain-style": [
+            "error",
+            "as-needed"
+        ],
+        "lodash/chaining": [
+            "error",
+            "always",
+            3
+        ],
+        "lodash/consistent-compose": [
+            "error",
+            "flow"
+        ],
+        "lodash/identity-shorthand": "off",
+        "lodash/import-scope": "off",
+        "lodash/matches-prop-shorthand": [
+            "error",
+            "always"
+        ],
+        "lodash/matches-shorthand": [
+            "error",
+            "always"
+        ],
+        "lodash/no-commit": "off",
+        "lodash/path-style": [
+            "warn",
+            "as-needed"
+        ],
+        "lodash/prefer-compact": "warn",
+        "lodash/prefer-filter": "warn",
+        "lodash/prefer-flat-map": "warn", // Only applicable in lodash 4
+        "lodash/prefer-invoke-map": "warn",
+        "lodash/prefer-map": "warn",
+        "lodash/prefer-reject": "warn",
+        "lodash/prefer-thru": "warn",
+        "lodash/prefer-wrapper-method": "warn",
+        "lodash/preferred-alias": "warn",
+        "lodash/prop-shorthand": [
+            "error",
+            "always"
+        ],
+        // Preference over native
+        "lodash/prefer-constant": "off",
+        "lodash/prefer-get": "warn",
+        "lodash/prefer-includes": "warn",
+        "lodash/prefer-is-nil": "warn",
+        "lodash/prefer-lodash-chain": "off", // Don't understand this rule :(
+        "lodash/prefer-lodash-method": [
+            "warn",
+            {
+                "ignoreMethods": [
+                    "keys",
+                    "create",
+                    "assign"
+                ]
+            }
+        ], // Needs careful maintenance.
+        "lodash/prefer-lodash-typecheck": "warn",
+        "lodash/prefer-matches": [
+            "warn",
+            3
+        ],
+        "lodash/prefer-noop": "warn",
+        "lodash/prefer-over-quantifier": "warn",
+        "lodash/prefer-startswith": "warn",
+        "lodash/prefer-times": "warn"
+    }
+}
